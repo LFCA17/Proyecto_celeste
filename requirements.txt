@@ -1,5 +1,0 @@
-pandas
-pymcel
-nbformat
-rebound
-plotly
