@@ -108,3 +108,138 @@ Cuando sea util, habilitar o sugerir:
 - Coordenadas de Jacobi.
 - Sistemas jerarquicos.
 - Comparaciones: implementacion propia vs REBOUND vs pymcel.
+
+## Graficos y simulaciones
+
+### Contexto
+
+Las visualizaciones deben ayudar a:
+
+- Entender la dinamica del sistema.
+- Validar resultados numericos.
+- Analizar estabilidad, energia y comportamiento a largo plazo.
+
+Herramientas esperadas:
+
+- numpy
+- matplotlib.pyplot
+- matplotlib.animation
+- plotly (clave para interactividad)
+- REBOUND
+- pymcel
+
+Objetivo:
+
+- Generar graficos claros, fisicos e interpretables.
+- Priorizar analisis fisico por encima de estetica.
+
+### Matplotlib (pylot)
+
+Importar siempre:
+
+- import matplotlib.pyplot as plt
+
+Usar segun aplique:
+
+- plt.plot()
+- plt.scatter()
+- plt.xlabel(), plt.ylabel()
+- plt.title()
+- plt.legend()
+- plt.axis('equal')
+- plt.grid()
+- plt.show()
+
+Preferir estructura con:
+
+- fig, ax = plt.subplots()
+
+### Plotly (interactivo)
+
+Importar:
+
+- import plotly.graph_objects as go
+
+Ventajas esperadas:
+
+- Zoom interactivo.
+- Rotacion en 3D.
+- Mejor visualizacion de trayectorias complejas.
+- Ideal para notebooks.
+
+### Tipos de graficos a priorizar
+
+1. Trayectorias 2D.
+  - Matplotlib: plt.plot(x, y)
+  - Plotly: go.Scatter(x=x, y=y, mode='lines')
+  - Opcional: marcar posicion actual.
+
+2. Trayectorias 3D (muy importante).
+  - Usar plotly con go.Scatter3d(x=..., y=..., z=..., mode='lines', name='body_i').
+  - Permitir rotacion interactiva.
+  - Usar colores distintos por cuerpo.
+
+3. Energia vs tiempo.
+  - Matplotlib: plt.plot(t, E)
+  - Plotly: go.Scatter(x=t, y=E)
+  - Mostrar K(t), U(t), E(t).
+  - Verificar conservacion.
+
+4. Momento de inercia.
+  - Graficar I(t) e interpretar evolucion.
+
+5. Virial (avanzado).
+  - Graficar G(t) y analizar estabilidad.
+
+6. Animaciones.
+  - Matplotlib: FuncAnimation.
+  - Plotly: frames y go.Figure(frames=frames).
+  - Incluir reproduccion temporal y control de velocidad cuando sea posible.
+
+7. Comparacion de metodos.
+  - Euler vs Leapfrog.
+  - Implementacion propia vs REBOUND.
+  - Usar multiples curvas en la misma grafica.
+
+8. Espacio de fase.
+  - x vs vx y y vs vy para estabilidad.
+
+### Uso de REBOUND en graficos
+
+- Extraer posiciones con sim.particles[i].x, y, z.
+- Graficar con matplotlib o plotly segun necesidad.
+- Energia del sistema con sim.calculate_energy().
+
+### Buenas practicas de visualizacion
+
+- Usar funciones modulares:
+  - plot_trajectories()
+  - plot_energy()
+  - animate_system()
+- Mantener escalas fisicas correctas.
+- Usar axis('equal') en matplotlib.
+- En plotly, usar scene=dict(aspectmode='data').
+
+### Errores a detectar
+
+- Energia no conservada.
+- Trayectorias no fisicas.
+- Escalas incorrectas.
+- dt demasiado grande.
+- Visualizaciones enganiosas.
+
+### Estilo de respuesta para visualizaciones
+
+Siempre:
+
+1. Explicar que se va a graficar y por que.
+2. Mostrar codigo (matplotlib o plotly).
+3. Explicar como interpretar el resultado.
+
+### Bonus avanzado
+
+- Visualizacion 3D interactiva completa.
+- Animaciones con energia en tiempo real.
+- Comparacion entre sistemas ligados y no ligados.
+- Integracion con notebooks tipo pymcel.
+- from scipy.integrate import odeint, solve_ivp cuando aplique.
