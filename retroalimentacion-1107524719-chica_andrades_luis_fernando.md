@@ -27,6 +27,7 @@
 - Nota de ritmo de commits (promedio): 4.00 / 5.0
 
 Interpretación breve: Ritmo aceptable con evidencia de trabajo distribuido; se observó una pausa larga de 42 días.
+
 ## Retroalimentación
 
 - Archivo revisado: Definitivo.ipynb
@@ -36,11 +37,15 @@ Interpretación breve: Ritmo aceptable con evidencia de trabajo distribuido; se 
 - Se evidencia el objetivo central del proyecto (trayectoria de Apophis, contexto de 2029 y estimación de acercamiento a la Tierra).
 - Se aplican varias estrategias de modelado/validación y no un único experimento.
 - Hay secciones de metodología/resultados con interpretación de hallazgos.
+- El Notebook está muy bien organizado y los experimentos están muy bien organizados.
 
 ### Aspectos por mejorar
 
-- La narrativa del notebook debe mejorar: muchas celdas de código no están antecedidas por explicación.
+- Hay cosas de la organización del notebook que deben mejorar: muchas celdas de código no están antecedidas por explicación.
 - Hay celdas de código muy largas; se recomienda modularizar en funciones y dividir bloques extensos.
+- Falta indicar las fuentes de las que obtuviste la masa de los cuerpos.
+- No hay un experimento en el que realmente apliques la teoría del problema del CRTBP, ni siquiera al nivel más básico: integrar la trayectoria en el sistema rotante.
+- Se recomienda cerrar con una sección unica de conclusiones (3-5 puntos) que sintetice hallazgos físicos y computacionales y responda directamente al objetivo del proyecto.
 
 ### Valoración global
 
