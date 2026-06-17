@@ -5,7 +5,7 @@
 
 ## Archivos revisados
 
-- Definitivo.ipynb (entregado)
+- Definitivo.ipynb (versión final entregada)
 
 ## Historial de commits
 
@@ -30,7 +30,7 @@ Interpretación breve: Ritmo aceptable con evidencia de trabajo distribuido; se 
 
 ## Retroalimentación
 
-- Archivo revisado: Definitivo.ipynb
+- Archivo revisado: Definitivo.ipynb (versión final entregada)
 
 ### Aspectos positivos
 
@@ -38,16 +38,27 @@ Interpretación breve: Ritmo aceptable con evidencia de trabajo distribuido; se 
 - Se aplican varias estrategias de modelado/validación y no un único experimento.
 - Hay secciones de metodología/resultados con interpretación de hallazgos.
 - El Notebook está muy bien organizado y los experimentos están muy bien organizados.
+- Muy bien por los experimentos realizados con la teoría del CRTBP.
 
 ### Aspectos por mejorar
 
-- Hay cosas de la organización del notebook que deben mejorar: muchas celdas de código no están antecedidas por explicación.
-- Hay celdas de código muy largas; se recomienda modularizar en funciones y dividir bloques extensos.
-- Falta indicar las fuentes de las que obtuviste la masa de los cuerpos.
-- No hay un experimento en el que realmente apliques la teoría del problema del CRTBP, ni siquiera al nivel más básico: integrar la trayectoria en el sistema rotante.
-- Se recomienda cerrar con una sección unica de conclusiones (3-5 puntos) que sintetice hallazgos físicos y computacionales y responda directamente al objetivo del proyecto.
+- Hay cosas de la organización del notebook que deben mejorar: muchas celdas de código no están antecedidas por explicación. [Parcialmente mejorado]
+- Hay celdas de código muy largas; se recomienda modularizar en funciones y dividir bloques extensos. [No mejorado]
+- Falta indicar las fuentes de las que obtuviste la masa de los cuerpos. [Mejorado]
+- No hay un experimento en el que realmente apliques la teoría del problema del CRTBP, ni siquiera al nivel más básico: integrar la trayectoria en el sistema rotante. [Mejorado]
+- Se recomienda cerrar con una sección unica de conclusiones (3-5 puntos) que sintetice hallazgos físicos y computacionales y responda directamente al objetivo del proyecto. [Mejorado]
 
 ### Valoración global
 
 - El trabajo tiene avances técnicos, pero necesita mejoras de fondo en comunicación de resultados y/o cumplimiento explícito del objetivo.
 - Estado de recepción: requiere cambios antes de recepción final.
+- El trabajo final cumple con todas las exigencias del proyecto y esta bien presentado.
+
+## Valoración final
+
+- Mejoras implementadas: 4.00 (70%)
+- Aplicación al repositorio: 4.00 (10%)
+- Aspectos positivos: 4.50 (10%)
+- Valoración global: 4.50 (10%)
+
+**Nota final (redondeada)**: 0.7×4.00 + 0.1×4.00 + 0.1×4.50 + 0.1×4.50 = (redondeado) 4.1
